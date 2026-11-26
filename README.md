@@ -19,7 +19,7 @@ This is the application half. The deployment half is [`etl-gitops-config`](https
 | Trigger | What runs |
 |---|---|
 | Pull request to `main`, or push to `development` | `pytest tests/`; PRs also do a `docker build` to catch Dockerfile breakage |
-| Push to `main` | Build and push the image, then update `app/etl/dev/job.yaml` in the config repo |
+| Push to `main` | Build and push the image, then update `app/etl/dev/cronjob.yaml` in the config repo |
 
 Workflow: [`.github/workflows/ci-cd.yml`](.github/workflows/ci-cd.yml)
 
